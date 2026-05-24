@@ -1,0 +1,169 @@
+$primary: #122940;
+$secondary: #adcb16;
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  background-color: $white;
+  padding: 10px;
+  z-index: 999;
+
+  img {
+    width: 10%;
+    margin-left: 70px;
+    margin-top: 5px;
+  }
+
+  nav {
+    float: right;
+    margin-right: 55px;
+
+    ul {
+      list-style: none;
+      margin-right: 50px;
+
+      li {
+        display: inline-block;
+        margin: 15px;
+
+        a {
+          text-decoration: none;
+          color: $primary;
+          font-size: 20px;
+          transition: .5s;
+
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.banner {
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  &-botao {
+    position: absolute;
+    bottom: 12%;
+    margin-left: 5%;
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.botao-banner {
+  background-color: $secondary;
+  color: $primary;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: .3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.contato {
+  background-color: $white;
+}
+
+.vantagens {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 60px 40px;
+  background-color: #f8f8f8;
+}
+
+.card-vantagem {
+  display: flex;
+  gap: 15px;
+  width: 250px;
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    color: $primary;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.5;
+  }
+}
+
+.categorias {
+  padding: 60px 40px;
+  text-align: center;
+
+  h2 {
+    font-size: 35px;
+    color: $primary;
+    margin-bottom: 40px;
+  }
+}
+
+.cards-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.card-categoria {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 210px;
+  padding: 35px 25px;
+  transition: .3s;
+
+  &:hover {
+    transform: translateY(-8px);
+  }
+
+  img {
+    width: 140px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 22px;
+    color: $primary;
+  }
+}
+
+footer {
+  background-color: #0e1e2e;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+
+  p {
+    color: $white;
+    font-size: 14px;
+  }
+}

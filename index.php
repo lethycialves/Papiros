@@ -4,58 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="assets/img/icone.png">
+
     <link rel="stylesheet" href="assets/css/style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Papiro's</title>
-    <link rel="icon" href="assets/img/icone.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
-        <a class="img" href="index.html" title="home">
-            <img src="assets/img/logo.png" alt="logo">
-        </a>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre/sobre.html">Sobre</a></li>
-                <li><a href="catalogo/catalogo.html">Catálogo</a></li>
-                <li><a href="contato/contato.html">Contato</a></li>
-
-                <li>
-                    <a class="login" href="login/login.html">
-                        Entrar
-                    </a>
-                </li>
-
-                <li>
-                    <a class="cadastro" href="cadastro/cadastro.html">
-                        Cadastro
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
+    <?php include("header.php"); ?>
 
     <section class="banner">
 
         <img src="assets/img/banner.png" alt="Banner">
-          <div class="banner-botao">
-    <a href="catalogo/catalogo.html" class="botao-banner">CATÁLOGO</a>
 
-    <a href="contato/contato.html" class="botao-banner contato">
-      ENTRE EM CONTATO
-    </a>
-  </div>
+        <div class="banner-botao">
+
+            <a href="./catalogo/catalogo.php" class="botao-banner">
+                CATÁLOGO
+            </a>
+
+            <a href="./contato/contato.php" class="botao-banner contato">
+                ENTRE EM CONTATO
+            </a>
+
+        </div>
 
     </section>
+
     <section class="categorias">
 
         <h2>CATEGORIAS</h2>
@@ -78,57 +62,64 @@
             </div>
 
             <div class="card-categoria">
-                <img src="assets/img/longarina.png" alt="">
+                <img src="assets/img/longarina.png" alt="longarina">
                 <p>Longarinas</p>
             </div>
 
         </div>
 
     </section>
+
     <section class="vantagens">
 
         <div class="card-vantagem">
-            <img src="assets/img/qualidade.png" alt="">
+
+            <img src="assets/img/qualidade.png" alt="qualidade">
 
             <div>
                 <h3>QUALIDADE GARANTIDA</h3>
                 <p>Materiais de alta resistência e durabilidade.</p>
             </div>
+
         </div>
 
         <div class="card-vantagem">
+
             <img src="assets/img/configuracao.png" alt="design funcional">
 
             <div>
                 <h3>DESIGN FUNCIONAL</h3>
                 <p>Produtos pensados para o ambiente escolar.</p>
             </div>
+
         </div>
 
         <div class="card-vantagem">
+
             <img src="assets/img/fone.png" alt="atendimento especializado">
 
             <div>
                 <h3>ATENDIMENTO ESPECIALIZADO</h3>
                 <p>Soluções personalizadas para sua instituição.</p>
             </div>
+
         </div>
 
         <div class="card-vantagem">
+
             <img src="assets/img/confianca.png" alt="confiança">
 
             <div>
                 <h3>CONFIANÇA</h3>
                 <p>Mais de 10 anos de experiência no mercado.</p>
             </div>
+
         </div>
 
     </section>
 
-    <footer>
-        <img class="footer-img" src="assets/img/logo.png" alt="logo">
-        <p>© 2024 Papiro's. Todos os direitos reservados.</p>
-    </footer>
+    <?php include("footer.php"); ?>
+
 </body>
 
 </html>
