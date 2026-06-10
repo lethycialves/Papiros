@@ -34,7 +34,7 @@
 
             <div class="col-md-6">
 
-                <img src="../assets/img/logo.png" alt="Papiro's" class="img-fluid">
+                <img src="../assets/img/sobre.png" alt="Sobre a Papiro's" class="img-fluid">
 
             </div>
 

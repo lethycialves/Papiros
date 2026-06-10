@@ -33,6 +33,16 @@ $resultado = mysqli_query($conexao, $sql);
 <body>
 
     <?php include("header.php"); ?>
+    <?php
+       /* $erro = "erro/{$erro}.php";
+
+        //ver se a pg existe
+        if (file_exists($erro)) {
+            require $erro;
+        } else {
+            require("erro/erro.php");
+        }*/
+    ?>
 
     <section class="banner">
 
