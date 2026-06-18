@@ -59,7 +59,7 @@ $resultado = mysqli_query($conexao, $sql);
             </a>
 
             <a href="./contato/contato.php" class="contato">
-                ENTRE EM CONTATOOOOOOOOOO
+                ENTRE EM CONTATO
             </a>
 
         </div>

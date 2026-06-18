@@ -4,9 +4,9 @@
 
         <div class="container">
 
-            <a class="navbar-brand" href="http://papiros.local/index.php">
+            <a class="navbar-brand" href="http://papiros.local:8080/index.php">
 
-                <img src="http://papiros.local/assets/img/logo.png" alt="Logo Papiro's">
+                <img src="http://papiros.local:8080/assets/img/logo.png" alt="Logo Papiro's">
 
             </a>
 
@@ -21,25 +21,25 @@
                 <ul class="navbar-nav text-center">
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local/index.php">
+                        <a class="nav-link" href="http://papiros.local:8080/index.php">
                             Início
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local/sobre/sobre.php">
+                        <a class="nav-link" href="http://papiros.local:8080/sobre/sobre.php">
                             Sobre
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local/catalogo/catalogo.php">
+                        <a class="nav-link" href="http://papiros.local:8080/catalogo/catalogo.php">
                             Catálogo
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local/contato/contato.php">
+                        <a class="nav-link" href="http://papiros.local:8080/contato/contato.php">
                             Contato
                         </a>
                     </li>

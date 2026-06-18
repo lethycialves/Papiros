@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  padding-top: 100px;
+}
+
+main {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #122940;
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.form-control:focus {
+  border-color: #adcb16;
+  box-shadow: 0 0 0 0.2rem rgba(173, 203, 22, 0.25);
+}
+
+.form-label {
+  font-weight: 600;
+  color: #122940;
+}
+
+.btn-primary {
+  background-color: #adcb16;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  font-weight: bold;
+  color: #122940;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background-color: rgb(133.7866666667, 156.9866666667, 17.0133333333);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+/*# sourceMappingURL=contato.css.map */

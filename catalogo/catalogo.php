@@ -12,6 +12,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="../assets/css/catalogo.css">
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -36,14 +37,13 @@
             if (mysqli_num_rows($resultado) > 0) {
 
                 while ($produto = mysqli_fetch_assoc($resultado)) {
-            ?>
+                    ?>
 
                     <div class="col-12 col-md-6 col-lg-4">
 
                         <div class="card h-100">
 
-                            <img src="../assets/img/<?= $produto['imagem']; ?>"
-                                alt="<?= $produto['nome']; ?>">
+                            <img src="../assets/img/<?= $produto['imagem']; ?>" alt="<?= $produto['nome']; ?>">
 
                             <h3><?= $produto['nome']; ?></h3>
 
@@ -53,7 +53,7 @@
 
                     </div>
 
-            <?php
+                    <?php
                 }
             } else {
 
