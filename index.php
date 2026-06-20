@@ -1,9 +1,14 @@
 <?php
 
 include("conexao.php");
+include("funcao.php");
 
 $sql = "SELECT * FROM produto";
 $resultado = mysqli_query($conexao, $sql);
+
+$produtos = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+
+$categoriasHome = ["Cadeira", "Mesa", "Armário", "Longarina"];
 
 ?>
 
@@ -33,16 +38,6 @@ $resultado = mysqli_query($conexao, $sql);
 <body>
 
     <?php include("header.php"); ?>
-    <?php
-       /* $erro = "erro/{$erro}.php";
-
-        //ver se a pg existe
-        if (file_exists($erro)) {
-            require $erro;
-        } else {
-            require("erro/erro.php");
-        }*/
-    ?>
 
     <section class="banner">
 
@@ -72,22 +67,33 @@ $resultado = mysqli_query($conexao, $sql);
 
         <div class="row justify-content-center g-4">
 
-            <?php while($produto = mysqli_fetch_assoc($resultado)) { ?>
+            <?php foreach ($categoriasHome as $categoria) {
+
+                $produtosCategoria = filtrarProdutosPorCategoria($produtos, $categoria);
+
+                if (count($produtosCategoria) > 0) {
+
+                    $exemplo = $produtosCategoria[0];
+            ?>
 
                 <div class="col-6 col-md-3">
 
-                    <div class="card h-100">
+                    <a href="./catalogo/catalogo.php?categoria=<?= $categoria ?>" class="text-decoration-none text-dark">
 
-                        <img src="assets/img/<?= $produto['imagem'] ?>"
-                             alt="<?= $produto['nome_produto'] ?>">
+                        <div class="card h-100">
 
-                        <p><?= $produto['nome_produto'] ?></p>
+                            <img src="assets/img/<?= $exemplo['imagem'] ?>"
+                                 alt="<?= $categoria ?>">
 
-                    </div>
+                            <p><?= $categoria ?></p>
+
+                        </div>
+
+                    </a>
 
                 </div>
 
-            <?php } ?>
+            <?php } } ?>
 
         </div>
 

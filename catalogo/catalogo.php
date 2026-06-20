@@ -20,47 +20,103 @@
 
     <?php include("../header.php"); ?>
 
-    <section class="container py-5">
+    <section class="catalogo">
 
-        <h1 class="text-center mb-5">Catálogo</h1>
+        <div class="container">
 
-        <div class="row g-4">
+            <h1>Catálogo</h1>
 
             <?php
 
             include("../conexao.php");
+            include("../funcao.php");
 
-            $sql = "SELECT * FROM produto";
+            $sql = "SELECT * FROM produto ORDER BY nome_produto";
 
             $resultado = mysqli_query($conexao, $sql);
 
-            if (mysqli_num_rows($resultado) > 0) {
+            $produtos = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
 
-                while ($produto = mysqli_fetch_assoc($resultado)) {
-                    ?>
+            $categorias = ["Cadeira", "Mesa", "Armário", "Longarina", "Mocho"];
 
-                    <div class="col-12 col-md-6 col-lg-4">
+            $categoriaSelecionada = $_GET['categoria'] ?? '';
 
-                        <div class="card h-100">
+            ?>
 
-                            <img src="../assets/img/<?= $produto['imagem']; ?>" alt="<?= $produto['nome']; ?>">
+            <form class="row g-2 mb-4" method="GET">
 
-                            <h3><?= $produto['nome']; ?></h3>
+                <div class="col-auto">
+                    <select name="categoria" class="form-select">
 
-                            <p><?= $produto['descricao']; ?></p>
+                        <option value="">Todas as categorias</option>
+
+                        <?php foreach ($categorias as $categoria) { ?>
+
+                            <option value="<?= $categoria ?>"
+                                <?= $categoriaSelecionada === $categoria ? 'selected' : '' ?>>
+                                <?= $categoria ?> (<?= contarProdutosPorCategoria($produtos, $categoria) ?>)
+                            </option>
+
+                        <?php } ?>
+
+                    </select>
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Filtrar</button>
+                </div>
+
+            </form>
+
+            <div class="row">
+
+                <?php
+                if (!validarProdutos($produtos)) {
+
+                    echo "<p>Nenhum produto cadastrado.</p>";
+
+                } else {
+
+                    $produtosExibidos = $categoriaSelecionada !== ''
+                        ? filtrarProdutosPorCategoria($produtos, $categoriaSelecionada)
+                        : $produtos;
+
+                    if (count($produtosExibidos) > 0) {
+
+                        foreach ($produtosExibidos as $produto) {
+                ?>
+
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+
+                            <div class="catalogo-card">
+
+                                <div class="catalogo-img">
+                                    <img src="../assets/img/<?= $produto['imagem']; ?>"
+                                        alt="<?= $produto['nome_produto']; ?>">
+                                </div>
+
+                                <div class="catalogo-info">
+
+                                    <h3><?= $produto['nome_produto']; ?></h3>
+
+                                    <p><?= $produto['descricao']; ?></p>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
-                    </div>
+                <?php
+                        }
+                    } else {
 
-                    <?php
+                        echo "<p>Nenhum produto encontrado.</p>";
+                    }
                 }
-            } else {
+                ?>
 
-                echo "<p class='text-center'>Nenhum produto cadastrado.</p>";
-            }
-
-            ?>
+            </div>
 
         </div>
 

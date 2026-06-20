@@ -98,26 +98,43 @@ header {
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 35px 25px;
+  border: none;
+  border-radius: 14px;
+  padding: 35px 20px;
   transition: .3s;
   height: 100%;
   align-items: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
   &:hover {
     transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   }
 
-  img {
-    width: 100px;
+  .card-icone {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #f0f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
   }
 
+  img {
+    height: 90px;
+    width: auto;
+    max-width: 80%;
+    object-fit: contain;
+  }
+
   p {
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 600;
     color: $primary;
     margin-bottom: 0;
+    letter-spacing: .3px;
   }
 }
 
@@ -214,8 +231,13 @@ footer {
   .card {
     padding: 20px;
 
+    .card-icone {
+      width: 110px;
+      height: 110px;
+    }
+
     img {
-      width: 100px;
+      height: 70px;
     }
 
     p {

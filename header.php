@@ -46,6 +46,16 @@
 
                 </ul>
 
+                <form class="d-flex ms-lg-3 mt-3 mt-lg-0" action="http://papiros.local:8080/busca.php" method="GET">
+
+                    <input class="form-control" type="search" name="busca" placeholder="Buscar produto...">
+
+                    <button class="btn btn-outline-secondary ms-2" type="submit">
+                        Buscar
+                    </button>
+
+                </form>
+
             </div>
 
         </div>
