@@ -6,7 +6,12 @@ include("funcao.php");
 $sql = "SELECT * FROM produto";
 $resultado = mysqli_query($conexao, $sql);
 
-$produtos = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
+$produtos = [];
+
+while ($linha = mysqli_fetch_assoc($resultado)) {
+
+    $produtos[] = $linha;
+}
 
 $categoriasHome = ["Cadeira", "Mesa", "Armário", "Longarina"];
 

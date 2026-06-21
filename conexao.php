@@ -1,6 +1,6 @@
 <?php
 
-$host = "192.168.56.1";//ip  do banco de dados
+$host = "192.168.56.10";//ip do banco de dados
 $user = "lethycia";
 $senha = "789456";
 $db = "projeto_papiros";
