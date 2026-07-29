@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <link rel="icon" href="../assets/img/icone.png">
+    <link rel="icon" href="../../assets/img/icone.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,13 +12,17 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/catalogo.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/catalogo.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
 
-    <?php include("../header.php"); ?>
+    <?php
+    include("../../config/conexao.php");
+    include("../../includes/funcao.php");
+    include("../../includes/header.php");
+    ?>
 
     <section class="catalogo">
 
@@ -27,9 +31,6 @@
             <h1>Catálogo</h1>
 
             <?php
-
-            include("../conexao.php");
-            include("../funcao.php");
 
             $sql = "SELECT * FROM produto ORDER BY nome_produto";
 
@@ -91,7 +92,7 @@
                             <div class="catalogo-card">
 
                                 <div class="catalogo-img">
-                                    <img src="../assets/img/<?= $produto['imagem']; ?>"
+                                    <img src="../../assets/img/<?= $produto['imagem']; ?>"
                                         alt="<?= $produto['nome_produto']; ?>">
                                 </div>
 
@@ -122,7 +123,7 @@
 
     </section>
 
-    <?php include("../footer.php"); ?>
+    <?php include("../../includes/footer.php"); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 

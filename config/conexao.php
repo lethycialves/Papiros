@@ -10,7 +10,7 @@ $conexao = new mysqli($host, $user, $senha, $db);
 if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);
 }
-*/
+*/  
 
 /*MÁQUINA LOCAL*/
 $host = "localhost";

@@ -1,7 +1,7 @@
 <?php
 
-include("conexao.php");
-include("funcao.php");
+include 'config/conexao.php';
+include 'includes/funcao.php';
 
 $sql = "SELECT * FROM produto";
 $resultado = mysqli_query($conexao, $sql);
@@ -42,7 +42,7 @@ $categoriasHome = ["Cadeira", "Mesa", "Armário", "Longarina"];
 
 <body>
 
-    <?php include("header.php"); ?>
+    <?php include("includes/header.php"); ?>
 
     <section class="banner">
 
@@ -54,11 +54,11 @@ $categoriasHome = ["Cadeira", "Mesa", "Armário", "Longarina"];
 
         <div class="botoes">
 
-            <a href="./catalogo/catalogo.php" class="botao">
+            <a href="pages/catalogo/catalogo.php" class="botao">
                 CATÁLOGO
             </a>
 
-            <a href="./contato/contato.php" class="contato">
+            <a href="pages/contato/contato.php" class="contato">
                 ENTRE EM CONTATO
             </a>
 
@@ -83,7 +83,7 @@ $categoriasHome = ["Cadeira", "Mesa", "Armário", "Longarina"];
 
                 <div class="col-6 col-md-3">
 
-                    <a href="./catalogo/catalogo.php?categoria=<?= $categoria ?>" class="text-decoration-none text-dark">
+                    <a href="pages/catalogo/catalogo.php?categoria=<?= $categoria ?>" class="text-decoration-none text-dark">
 
                         <div class="card h-100">
 
@@ -188,7 +188,7 @@ $categoriasHome = ["Cadeira", "Mesa", "Armário", "Longarina"];
 
     </section>
 
-    <?php include("footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 

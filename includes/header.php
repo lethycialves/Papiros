@@ -28,19 +28,19 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local:8080/sobre/sobre.php">
+                        <a class="nav-link" href="http://papiros.local:8080/pages/sobre/sobre.php">
                             Sobre
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local:8080/catalogo/catalogo.php">
+                        <a class="nav-link" href="http://papiros.local:8080/pages/catalogo/catalogo.php">
                             Catálogo
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="http://papiros.local:8080/contato/contato.php">
+                        <a class="nav-link" href="http://papiros.local:8080/pages/contato/contato.php">
                             Contato
                         </a>
                     </li>
